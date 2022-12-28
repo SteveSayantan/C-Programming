@@ -25,9 +25,9 @@
           / \    /  
         5   8   14
 
-    All the nodes to the left of 9 must be smaller
+    All the nodes to the left of 9 must be smaller than 9
 
-    All the nodes to the right of 9 must be greater
+    All the nodes to the right of 9 must be greater than 9
 */
 
 #include <stdio.h>

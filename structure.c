@@ -5,9 +5,9 @@
 
    struct <struct_name>{
 
-       data_type var1
-       data_type var2
-       data_type var3
+       data_type var1;
+       data_type var2;
+       data_type var3;
 
    } variable_names;  
 

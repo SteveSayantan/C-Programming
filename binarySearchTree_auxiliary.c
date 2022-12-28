@@ -25,34 +25,6 @@ void InOrder(struct TreeNode * ptr){
     }
 }
 
-void insertNodeIterative(struct TreeNode * ptr, int item){  
-
-    while(ptr!=NULL){       // This loop takes the ptr to the destination
-        if(ptr->data==item){
-            printf("Node Already Exists\n");
-            return;
-        }
-        else if(ptr->data>item){
-            if(ptr->lChild==NULL) break;    // If lChild is NULL, stop there
-            ptr=ptr->lChild;
-        }
-        else if(ptr->data<item){
-            if(ptr->rChild==NULL) break;    // If rChild is NULL, stop there
-            ptr=ptr->rChild;
-        }
-        
-    }
-
-    struct TreeNode * new = createNode(item);
-
-    if(ptr->data>item){
-        ptr->lChild= new;
-    }
-    else{
-        ptr->rChild= new;
-    }
-}
-
 struct TreeNode * insertNodeRecursive(struct TreeNode * ptr, int item){
     if(ptr==NULL){  
         return createNode(item);
@@ -66,6 +38,42 @@ struct TreeNode * insertNodeRecursive(struct TreeNode * ptr, int item){
     }
 
     return ptr;
+}
+
+int getTotalNodes (struct TreeNode * ptr){
+    if(ptr == NULL){
+        return 0;
+    }
+    return 1+getTotalNodes(ptr->lChild)+ getTotalNodes(ptr->rChild);
+}
+
+int countInternalNodes(struct TreeNode * ptr){
+    if(ptr == NULL || (ptr->lChild==NULL && ptr->lChild==NULL)){
+        return 0;
+    }
+    return 1+countInternalNodes(ptr->lChild)+ countInternalNodes(ptr->rChild);
+}
+
+int getLeafCount(struct node* ptr){
+  if(ptr == NULL)       
+    return 0;
+  if(ptr->lChild == NULL && ptr->rChild==NULL)      
+    return 1;            
+  else 
+    return getLeafCount(ptr->lChild) + getLeafCount(ptr->rChild);      
+}
+
+int max(a,b){   // Auxiliary Function to find the maximum number
+    return a>b?a:b;
+}
+
+int height(struct TreeNode* ptr){
+    // base case tree is empty
+    if (ptr == NULL)
+        return -1;
+ 
+    // If tree is not empty then height = 1 + max of left height and right heights
+    return 1 + max(height(ptr->lChild), height(ptr->rChild));
 }
 
 int main(){
@@ -96,27 +104,28 @@ int main(){
     child3->rChild= child7;
     
 
-/* 
-    Our Binary Search Tree looks like this:
+    /* 
+        Our Binary Search Tree looks like this:
                7
               / \
             5    9
            /\    /\
           4  6  8  11           
-*/  
+    */  
 
     insertNode(root,10); 
-    InOrder(root); 
-/* 
-    After insertion, Binary Search Tree looks like this:
+    InOrder(root);
+    printf("Total Number of Nodes is: %d\n",getTotalNodes(root)); 
+    /* 
+        After insertion, Binary Search Tree looks like this:
                7
               / \
             5    9
            /\    /\
-          4  6  8  11 
+          4  6  8  11
                    /
                   10           
-*/  
+    */  
 
    
 

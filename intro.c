@@ -1,3 +1,9 @@
+/* 
+    Data Structure: https://www.geeksforgeeks.org/data-structures/
+
+    Application of Data Structure: https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/
+    
+*/
 #include <stdio.h> //preprocessor command
 
 int main() { //The execution of the program starts here

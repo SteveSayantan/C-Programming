@@ -45,7 +45,7 @@ int main() {
 
     >> // Binary right shift operator
 
-    //Miscellaneous Operators (Works on each bit)
+    //Miscellaneous Operators
 
     & //It is addressof operator, this returns the adderss of a variable
 

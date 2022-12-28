@@ -14,7 +14,7 @@
 
         c. Stack --> Uses LIFO  
 
-        d. Heap
+        d. Heap  --> Used for Dynamic Memory Allocation
     
  */
 
@@ -26,7 +26,7 @@
 
     3. If the space is insufficient, allocation of memory fails and it returns a NULL pointer.
 
-    4. All the values at allocated memory are initialized to **garbage values**.
+    4. All the values at allocated memory are initialized with **garbage values**.
 
     Syntax: 
 
@@ -38,7 +38,7 @@
 
     1. calloc() stands for contiguous allocation. It reserves n blocks of memory with the given amount of bytes.
 
-    2. All the values at allocated memory are **initialized to 0**
+    2. All the values at allocated memory are **initialized with 0**
 
     3. The rest is similar to malloc()
 

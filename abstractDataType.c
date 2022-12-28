@@ -1,11 +1,13 @@
 /* 
-    Abstract Data Type: It is used to create custom data type with some values and functions. 
+    Abstract Data Type: It is used to create custom data structure  with some values and functions. 
+
+    For further details about ADT: https://www.geeksforgeeks.org/abstract-data-types/
 
     In C, we use struct to define ADT
 
 */
 
-// Implementing Array as an ADT: Making a custom data-type which works like array but might have some extra features
+// Implementing Array as an ADT: Making a custom data-structure which works like array but might have some extra features
 
 #include <stdio.h>
 #include <stdlib.h>
