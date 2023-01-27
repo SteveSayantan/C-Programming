@@ -10,5 +10,6 @@
 
     Data_type name [rows][cols] ={{a,b,c},{x,y,z}} ; //Declaration and initialization for 2D arrays, specifying 'cols' is mandatory, even while passing a 2D array as a formal parameter
 
+    Row-major & Column-major mapping https://youtu.be/MJZd6uPi88E
  */
 

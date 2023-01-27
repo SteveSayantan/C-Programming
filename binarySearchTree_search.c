@@ -25,14 +25,22 @@ struct TreeNode * searchEle(struct TreeNode * ptr, int key){ //Recursive Approac
         return ptr;
     }
     else if(ptr->data<key){
-        searchEle(ptr->rChild,key);
+        return searchEle(ptr->rChild,key);
     }
     else{
-        searchEle(ptr->lChild,key);
+        return searchEle(ptr->lChild,key);
     }
 }
 
-
+int getSmallest(struct TreeNode * ptr){
+    if(ptr->lChild!=NULL){
+        ptr=ptr->lChild;
+        return getSmallest(ptr);
+    }
+    else{
+        return ptr->data;
+    }
+}
 
 int main(){
     struct TreeNode * root;

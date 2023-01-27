@@ -54,6 +54,7 @@ struct TreeNode * deleteNode(struct TreeNode * ptr, int item){ // Using InOrder 
         ptr->rChild= deleteNode(ptr->rChild,item);
         return ptr;
     }
+    //After reaching the desired node,
     // If only one child is present
     if(ptr->lChild==NULL){
         struct TreeNode * temp = ptr->rChild;

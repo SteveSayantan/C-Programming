@@ -15,7 +15,7 @@ void displayList(struct Node * ptr){
     while(ptr!=start);
 }
 
-struct Node * insertAtFirst(struct Node * ptr, int item){
+struct Node * insertAtFirst(struct Node * ptr, int item){ // This basically adds a node before the given node (ptr)
     struct Node * start=ptr->next;
     while(start->next!=ptr){
         start= start->next;

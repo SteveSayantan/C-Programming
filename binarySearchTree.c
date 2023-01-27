@@ -13,6 +13,10 @@
 
         4. No duplicate node is present.
 
+        5. For a particular node, the maximum value at its left subtree should always be less than its value.
+
+        6. For a particular node, the minimum value at its right subtree should always be greater than its value.
+
         5. InOrder Traversal of a Binary Search Tree gives an ascending sorted array (E.g. 2,4,5,7,8,9,11,14,15 in this case)
 
     Example of Binary Search Tree: (https://www.freecodecamp.org/news/data-structures-101-binary-search-tree-398267b6bff0/)

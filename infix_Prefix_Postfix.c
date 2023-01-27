@@ -51,9 +51,9 @@
 
 ----Algorithm to evaluate Postfix or Prefix expression using Stack (Reference https://youtu.be/BnMLdX30q7M)
 
-    Step 1: Add closing parenthesis ) at the end of P **Postfix** ,Or, Add opening parenthesis ( at the start of P **Prefix** 
+    Step 1: Add closing parenthesis ) at the end of expression **Postfix** ,Or, Add opening parenthesis ( at the start of expression **Prefix** 
 
-    Step 2: Scan P from left to right until ) is encountered: **Postfix** , Or, Scan P from right to left until ( is encountered: **Prefix**
+    Step 2: Scan expression from left to right until ) is encountered: **Postfix** , Or, Scan expression from right to left until ( is encountered: **Prefix**
 
         I. If an Operand is encountered, PUSH it onto stack
         II. If an operator is encountered:
