@@ -29,22 +29,30 @@
 int main(){
     FILE * ptr= NULL;
     char ipStr[15],c;
+    char * d;
     ptr= fopen("test.txt","r");     // "w" for write mode
 
     
-    // Reading a String:
+    // Reading and Displaying a String:
+    //--------------------------------
+
     // fgets(ipStr,13,ptr);
     // puts(ipStr); 
    
 
-    // Reading a Character:
+    // Reading and Displaying a Character:
+    //------------------------------------
+
     // c=fgetc(ptr);
-    // putc(c,stdout);          // for details on putc https://www.geeksforgeeks.org/c-library-function-putc/     
+    // fscanf(ptr,"%c",&c);     // fscanf can be used too  https://shorturl.at/wBFTY
+    putc(c,stdout);             // for details on putc     https://www.geeksforgeeks.org/c-library-function-putc/ 
+                  
 
+    fscanf(ptr,"%c",&c);
+    printf("%c",c);             // We can print like this too
 
-
-    // For the rest of the modes, checkout the lecture linked above.
 
     fclose(ptr);
+    // For the rest of the modes, checkout the lecture linked above.
     return 0;
 }
