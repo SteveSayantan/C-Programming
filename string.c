@@ -28,11 +28,11 @@ int main(){
     char ipStr[7];
     gets(ipStr); // It takes the string input (Length 6) from the user and stores it in ipStr array with null character added at its end.
 
-    // We can not take input of white space characters using scanf, that's why use of gets is recommended in case of String input
+    // We can not take input of white space characters using scanf, that's why use of gets is recommended in case of String input (checkout https://www.geeksforgeeks.org/difference-between-scanf-and-gets-in-c , https://www.geeksforgeeks.org/problem-with-using-fgets-gets-scanf-after-scanf-in-c/ ,  also look for other articles in GFG)
 
     // Printing a String 
 
-    puts(ipStr); //Prints the ipStr char array (String)
+    puts(ipStr); //Prints the ipStr char array (String) . checkout https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/ 
 
 }
 

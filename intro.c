@@ -9,7 +9,7 @@
 int main() { //The execution of the program starts here
     int a,b;
     printf("Enter number a: \n");
-    scanf("%d",&a);
+    scanf("%d",&a);         // details about scanf https://www.geeksforgeeks.org/scanf-in-c/
     
     printf("Enter number b: \n");
     scanf("%d",&b);
@@ -24,7 +24,7 @@ int main() { //The execution of the program starts here
     
     3. Assembly: In this step, the .s file containing assembly language is converted into machine language (binary). This type of file has .o extension.
     
-    4. Linking: Linker joins all the .o files to make the executable file(.exe)
+    4. Linking: Linker joins all the .o files to make the executable file(.exe) i.e. links the function implementations
 */
     return 0;
 }

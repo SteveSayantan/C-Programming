@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define PI 3.14   // Don't put ; after this
+#define PI 3.14   // Don't put ; after this, it replaces PI with 3.14 everywhere in the program
 
 int globalVar=34; //This is a global variable which can be accessed from anywhere in this program
 int main() {

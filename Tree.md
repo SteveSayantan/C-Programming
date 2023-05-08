@@ -45,7 +45,13 @@ It is a tree with its each node having a max degree of 2.
     
 **Representation of Binary Tree:**
 
-- Array Representation: Inefficient as insertion, deletion operation is very costly. 
+- Array Representation: Inefficient as insertion, deletion operation are very costly.
+
+  If a Node is at index i in the array (for 0 based index)
+  - its left child is at `2*i+1`
+  - its right child is at `2*i+2`
+  - its parent is at `(i-1)/2` (floor)
+  - For a missing child, we must leave the corresponding space blank
 
   ![ScreenShot of Array Representation of BT](./asset/arrToBT.JPG)
   

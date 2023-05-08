@@ -32,7 +32,7 @@
 
         Step 2: ([pq-]-[ra/]) => pq-ra/-
 
-    Q2: Convert -b, logx, x!, logx! into prefix and postfix. (Unary Operators)
+    Q2: Convert -b, logx, x!, log x! into prefix and postfix. (Unary Operators)
 
         Prefix: b-, logx, !x, log!x
 
@@ -68,4 +68,4 @@
     
  */
 
-//Infix to Postfix using Stack
+//Infix to Postfix using Stack (Reference: https://youtu.be/PAceaOSnxQs and Code With Harry's Lecture)
