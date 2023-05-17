@@ -35,3 +35,32 @@ int main() {
     ptrArr++; // This can be done, as ptrArr is a separate pointer which stores the adderss of arr[0]
     return 0;
 }
+/* 
+    2D arrays and pointers:
+    -----------------------
+
+        Resources:
+        1)  https://www.youtube.com/live/Hdoy8i0PrFo?feature=share 
+
+        2)  https://youtu.be/tw-qWGG8y5g
+
+        3)  https://stackoverflow.com/questions/7586702/is-2d-array-a-double-pointer
+
+        Also refer to Array1D.jpg and Array2D.jpg from asset
+
+    Key Takeaways:
+
+    i)  Arrays, when passed to a function, always get converted to a pointer to its first element (this element may be an int or an entire array)
+
+    ii) A 2D array can be considered as an array of 1D arrays. When a 2D array is passed to a function, it gets converted to a pointer to its first sub-array (of type int[]).
+
+    iii) Now that sub-array is also converted to a pointer to its first integer. Thereby, returning the address of the first integer of the 2D array.
+
+        e.g., int arr[][3]={{1,2,3},{4,5,6}} can be written using pointer as: int (*p)[3]=arr       (Here, p is a pointer to the first sub-array of type int[3])
+
+        Now, p returns the address of the first integer of the 2D array (as stated above). 
+
+        *p returns the value stored at that address i.e. the first-sub array. But this sub-array is converted to a pointer to its first integer. Thereby, returning the address of the first integer.
+
+        To get the value at first index, we have to write **p (to dereference the value returned by *p)
+*/

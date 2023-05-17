@@ -22,3 +22,5 @@ int main(){
 
    int *ptr3,*ptr4;  // For declaring two pointers we have to use * in each case, otherwise it will be considered as an int datatype.
 }
+
+// For double pointer, checkout https://www.youtube.com/live/C32MN8lQdrA?feature=share
