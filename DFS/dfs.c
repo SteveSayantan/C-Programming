@@ -1,59 +1,52 @@
-// Didn't include <stdio.h> as it is already included in queue.c
-#include "cQueue_bfs.c"      // For including local files, we use " " instead of < >
+#include "stack-dfs.c"
 
+int graph[10][10];
 
-int graph[MAX][MAX];       // MAX is defined in queue program
-
-
-void displayArr(){
-    for(int i=0;i<MAX;i++){
-        for(int j=0;j<MAX;j++){
+void displayArr(int N){
+    for(int i=0;i<N;i++){
+        for(int j=0;j<N;j++){
             printf("%d ",graph[i][j]);
         }
         printf("\n");
     }
 }
 
-void bfs(){
-    int visited[MAX];
-    for (int i = 0; i < MAX; i++)
-    {
-        visited[i]=0;
-    }
-    
-    int startInd=0;
-    visited[startInd]=1;
-    enQueue(startInd);
+void dfs(int N){
 
-    while (!isEmpty())
-    {
-        int node= deQueue();
+    int visited[10]={0};
+  
+    int startNode=2;
+    visited[startNode]=1;
+    push(startNode);
+
+    while(!isEmpty()){
+        int node= pop();
         printf("%d\t",node);
 
-        for(int i=0;i<MAX;i++){
-            if(graph[node][i]&& !visited[i]){
+        for(int i=0;i<N;i++){
+            if(graph[node][i] && !visited[i]){
                 visited[i]=1;
-                enQueue(i);
+                push(i);
             }
         }
     }
-    
-    printf("\n");    
+    printf("\n");
+
 }
-
-
 int main(){
-
-/* Reading the file */   
+    /* Reading the file */   
 
     FILE * ptr= fopen("testMatrix.txt","r");
     if(ptr==NULL) {
         printf("File does not exist\n");
         return 1;
     }
+    int V;
+    fscanf(ptr,"%d",&V);
+
     int n;
-    for(int i=0;i<MAX;i++){
-        for(int j=0;j<MAX;j++){
+    for(int i=0;i<V;i++){
+        for(int j=0;j<V;j++){
             if(fscanf(ptr,"%d",&n)!=EOF){
                 graph[i][j]=n;
             }
@@ -66,17 +59,17 @@ int main(){
     }
     fclose(ptr);
 
-/* Displaying the Received Adjacency Matrix */
+    // Displaying the received adjacency matrix
+    printf("%d\n",V);
+    displayArr(V);
 
-    displayArr();
-
-/* Calling BFS function */
-    printf("The Breadth First Search Traversal of the graph looks like\t");
-    bfs();
+    // Calling DFS function
+    printf("The DFS of given graph looks like:\t");
+    dfs(V);
     return 0;
 }
-
 /* 
+Reference: https://youtu.be/4M1u4-eGlxU 
 
 Time Complexity (Adjacency Matrix) :
 ----------------------------------
@@ -94,7 +87,7 @@ Time Complexity (Adjacency Matrix) :
 
     (5+5*5)
 
-    (N+N*N)  --> O(N^2)                     // N is the number of vertices
+    (V+V*V)  --> O(V^2)                     // V is the number of vertices
 
 
 
@@ -108,7 +101,7 @@ Time Complexity (Adjacency List):
         2 -> 0,  4
         3 -> 0
         4 -> 2
-        So, total no. of edges = E = 4
+        So, total no. of edges, E = 4
 
     For first while loop , 
     node = 0,   edges = 3
@@ -116,7 +109,7 @@ Time Complexity (Adjacency List):
     This step will be executed every time we enter into while loop.
 
     So, for first while loop how many times for loop will execute ??
-    It will be equal to the no. of edges , here it will be 3.
+    It will be equal to the degree of node 0 , i.e. 3
 
     Therefore, total =  ( 1 + 3 )
 
