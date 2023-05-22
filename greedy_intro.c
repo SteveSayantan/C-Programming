@@ -26,5 +26,15 @@
         --------
         Here, a problem is solved in stages. At every stage, the best option available is chosen . In this way, ultimately we can get the optimal solution.
         Ref: https://www.geeksforgeeks.org/introduction-to-greedy-algorithm-data-structures-and-algorithm-tutorials/
+
+    Dynamic Programming
+    -------------------
+
+        Approach :
+        --------
+        Dynamic Programming is mainly an optimization over plain recursion. Wherever we see a recursive solution that has repeated calls for the same inputs, we can optimize it using Dynamic Programming 
+        Ref: https://www.geeksforgeeks.org/introduction-to-dynamic-programming-data-structures-and-algorithm-tutorials/
+
+        It either uses memoization or tabulation method . 
  */
 

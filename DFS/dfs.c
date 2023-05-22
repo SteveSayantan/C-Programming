@@ -39,7 +39,7 @@ int main(){
     FILE * ptr= fopen("testMatrix.txt","r");
     if(ptr==NULL) {
         printf("File does not exist\n");
-        return 1;
+        exit(1);
     }
     int V;
     fscanf(ptr,"%d",&V);
@@ -53,7 +53,7 @@ int main(){
             else{
                 printf("File Terminated Unexpectedly\n");
                 fclose(ptr);
-                return 1;
+                exit(1);
             }
         }
     }
