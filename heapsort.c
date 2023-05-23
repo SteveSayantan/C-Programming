@@ -70,7 +70,7 @@ void swap(int arr[],int a, int b)
 // To heapify a subtree rooted with node i
 // which is an index in arr[].
 // n is size of heap
-void heapify(int arr[], int N, int i)   // **This function will perform heapify on elements from index i upto N-1 **
+void heapify(int arr[], int N, int i)   // ** This function will perform heapify only on the tree rooted at i, not on the entire heap **
 {
 	// First, find largest among root (i.e. i ) , its left child and right child
 
@@ -81,12 +81,12 @@ void heapify(int arr[], int N, int i)   // **This function will perform heapify 
 
 	int right = 2 * i + 2;
 
-	// If left child is larger than root
+	// If left child is larger than root and not exceeding N
 	if (left < N && arr[left] > arr[largest])
 
 		largest = left;
 
-	// If right child is larger than largest so far
+	// If right child is larger than largest so far and not exceeding N
 	if (right < N && arr[right] > arr[largest])
 
 		largest = right;
