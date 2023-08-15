@@ -26,10 +26,10 @@ void nextValue(int k)
         if(X[k]==0)
             break;
 
-        for(j=1;j<=k-1;j++)             // k-1 assures that we only check the previous adjacent vertices, not all of them
+        for(j=1;j<=k-1;j++){             // k-1 assures that we only check the previous adjacent vertices, not all of them
             if(G[k][j]==1 && X[k]==X[j])
                 break;
-
+        }
         if(j==k)
         // This means there is no conflict with adjacent vertices
             break;                      
