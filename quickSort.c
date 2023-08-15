@@ -19,31 +19,34 @@
 
         int s = low;
         int e = hi;
-        int m = s + (e - s) / 2;
-        int pivot = nums[m];
+        int pivot = nums[low];                    //Here, We have to choose arr[low] as pivot only
 
-        while (s <= e) {
+        while (s < e) {                         // if only one element is there, no need to run the loop
 
-            // also a reason why if its already sorted it will not swap
-            while (nums[s] < pivot) {
+            while (nums[s] <= pivot && s <hi) {          // search for an element greater than pivot in the left part. s<hi because we need s to stop when s=hi 
                 s++;
             }
-            while (nums[e] > pivot) {
+            while (nums[e] > pivot && e > low) {          // search for an element less than pivot in the right part. e<low because we need e to stop when e=low
                 e--;
             }
 
-            if (s <= e) {
+            if (s < e) {                      // we have to perform this check to prevent swapping when the pointers have changed their polarity 
                 int temp = nums[s];
                 nums[s] = nums[e];
                 nums[e] = temp;
-                s++;
-                e--;
             }
         }
 
-        // now my pivot is at correct index, please sort two halves now
-        sort(nums, low, e);
-        sort(nums, s, hi);
+        // Ultimately, swapping the pivot element with the element at e (This will ensure, all the smaller elements than pivot are on its left and vice versa)
+
+        int temp = nums[low];
+        nums[low] = nums[e];
+        nums[e] = temp;
+
+
+        // now my pivot is at index e, sort the two sides of pivot
+        sort(nums, low, e-1);
+        sort(nums, e+1, hi);
     }
 
 
