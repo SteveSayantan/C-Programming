@@ -77,3 +77,5 @@ int main(){
     printf("There are %d ways",nQueen(0));
     return 0;
 }
+
+// Reference: https://youtu.be/nC1rbW2YSz0

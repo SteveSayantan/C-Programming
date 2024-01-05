@@ -58,7 +58,7 @@
         I. If an Operand is encountered, PUSH it onto stack
         II. If an operator is encountered:
 
-            A. POP first two elements from stack, a is top element and b is next to top element
+            A. POP first two elements from stack, a is top element and b is next to top element (For an unary operator, only the topmost element is popped)
             B. Evaluate b op a & PUSH the result onto stack **Postfix** ,Or, Evaluate a op b & PUSH the result onto stack **Prefix**
 
     Step 3: Set the result = top of stack.
