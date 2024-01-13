@@ -4,11 +4,11 @@
 /* 
     Properties of a binary tree
     
-        1. The maximum number of nodes at level ‘l’ of a binary tree is 2^l
+        1. The maximum number of nodes at level ‘l’ of a binary tree is 2^l (level is 0-indexed)
 
-        2. The Maximum number of nodes in a binary tree of height ‘h’ is 2^h – 1
+        2. The Maximum number of nodes in a binary tree of height ‘h’ is 2^(h+1) – 1
 
-        3. In a Binary Tree with N nodes, the minimum possible height or the minimum number of levels is Log2 (N+1)   // log base 2
+        3. In a Binary Tree with N nodes, the minimum number of levels is Log2 (N+1)   // log base 2
 
         4. A Binary Tree with L leaves has at least |Log2 L|+ 1   levels   // log base 2
 
