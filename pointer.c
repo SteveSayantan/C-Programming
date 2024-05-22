@@ -2,7 +2,7 @@
 
 // It can be of different types such as int,char, array, function or any other pointer.
 
-// Its size depends on the architechture e.g. 4 bytes for 32 bits (in case of int pointers)
+// Its size depends on the architechture e.g. 4 bytes for 32 bits, 8 bytes for 64 bits (in case of int pointers)
 
 // Pointers are declared using * 
 

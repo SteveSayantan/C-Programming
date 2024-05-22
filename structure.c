@@ -26,6 +26,10 @@ struct Student{
     char name[10];
 } steve,harry;      //Declared steve and harry variables (as global variables)
 
+void passByValue(struct Student c)  // a separate copy of 'puja' is being passed to c
+{
+    c.id = 69;
+}
 
 int main(){
     struct Student ravi;    //we can also declare variables separately (Here ravi is only accessible in main function)
@@ -44,4 +48,18 @@ int main(){
 
     struct Student puja={2,45,'t',"Hello"}; // Declaration and initialization in the same line
     printf("%s",puja.name);
+
+    // This is how to pass a struct as call by value
+
+    printf("puja.id before passByValue() = %d\n", puja.id);
+
+    passByValue(puja);
+
+    printf("puja.id after passByValue() = %d\n",puja.id);
+    printf("As you can see the value of puja did not change\n");    // and the Student c inside the function has been destroyed i.e. no longer in memory 
+    
+
 }
+
+
+

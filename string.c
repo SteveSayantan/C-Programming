@@ -30,9 +30,11 @@ int main(){
 
     // We can not take input of white space characters using scanf, that's why use of gets is recommended in case of String input (checkout https://www.geeksforgeeks.org/difference-between-scanf-and-gets-in-c , https://www.geeksforgeeks.org/problem-with-using-fgets-gets-scanf-after-scanf-in-c/ ,  also look for other articles in GFG)
 
-    // Printing a String 
+    // However, we can also take string input using fgets ( most recommended!! ), checkout file_IO.c for details .
 
+    // Printing a String 
     puts(ipStr); //Prints the ipStr char array (String) . checkout https://www.geeksforgeeks.org/puts-vs-printf-for-printing-a-string/ 
+
 
 }
 

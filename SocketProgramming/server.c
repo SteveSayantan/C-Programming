@@ -165,7 +165,8 @@ int main() {
         After reading data from the client into the buffer, the code prints the received message using printf().
     */
 
-        
+    close(new_socket);
+    close(server_fd);
 
     return 0;
 }

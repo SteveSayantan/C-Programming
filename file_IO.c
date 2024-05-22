@@ -19,7 +19,7 @@
 
         char *  --> to store the output.
         int     --> number of characters to be read (including '\0')
-        FILE *  --> file to be read
+        FILE *  --> file/stream to be read (use stdin to read user input)
 
     4. To read character, we shall use fgetc() function which takes a pointer of type FILE and returns the ASCII code of the character. https://www.geeksforgeeks.org/fgetc-fputc-c/
 

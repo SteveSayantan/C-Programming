@@ -93,7 +93,7 @@ int main() {
      */
     printf("Message sent to server\n");
         
-    
+    close(sock);  
     
     return 0;
 }

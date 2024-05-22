@@ -17,6 +17,10 @@ int main() {
         %l is used to print long
         %lf is used to print double
         %Lf is used to print long double
+
+        %lu is used for unsigned long
+        %u is used for unsigned int
+        
         %s is used to print String
     */
 
@@ -58,6 +62,17 @@ int main() {
 
     printf("Hello Geeks\b\bF"); // Hello GeeFs  \b transfers the cursor one character back with or without deleting on different compilers.
 
+    // \r (aka carriage return) can be used to move the cursor back to the beginning of the line, to overwrite it with new contents (result varies depending on OS )
+    printf("Hello \rworld");    // world (here, Hello has been overwritten with world ) 
+
+    /* 
+        Important:
+        -----------
+
+        \n is newline character for unix
+        \r is newline character for mac (before OS X)
+        \r\n is newline character for windows 
+     */
 
     return 0;
 }

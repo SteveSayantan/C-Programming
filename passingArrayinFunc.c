@@ -2,13 +2,17 @@
 
 // Checkout https://www.geeksforgeeks.org/how-arrays-are-passed-to-functions-in-cc/
 
-void func1(int arr[]){ //Though we have used [], arr is considered as a pointer by this function (call by reference)
+
+//Though we have used [], arr is considered as a pointer by this function (call by reference).
+void func1(int arr[]){  // At this point, arr decays into a pointer and starts pointing to the first element in the array
 
     arr[2]=69;  //This change will get reflected in the original array
     for(int i=0;i<4;i++){
         printf("%3d",arr[i]);
     }
 
+    // since arr has become a pointer to an int, the following will give the size of an int pointer (i.e. 8 bytes)
+    printf("The size of arr is %lu",sizeof arr); // 8
 }
 
 
@@ -34,4 +38,7 @@ void main(){
 
     //Passing an array to the function by declaring a pointer in the function to hold the base address of the array 
     func2(nums); 
+
+    // since, we are within the scope of the nums array, here nums points to the entire array (so, its size is equal to that of the array itself)
+    printf("The length of the array is %lu",sizeof nums/sizeof nums[0]); // 4
 }

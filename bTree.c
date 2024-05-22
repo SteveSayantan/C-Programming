@@ -14,20 +14,22 @@
 
     B-Tree:
 
-    1) It is a type of M-way search tree having some extra properties.
+    1) It is a type of M-way search tree having some extra properties on construction of the tree.
 
     2) It is generally used in DBMS.
 
     3) In a B-Tree, all the leaf nodes should be at the same level.
 
-    4) Each node must have at least M/2(ceil) keys.
+    4) Each internal node must have at least M/2(ceil) children.
 
-    5) The above rule does not imply for the root node. The root node can have minimum one key and two children.
+    5) Each node must have at least [ M/2(ceil) - 1 ] keys.
 
-    6) Adjacent to each key in a node, there is a Record Pointer which points to a record in data table. For the sake of simplicity, we ignore these pointers.
+    6) The above rule does not imply for the root node. The root node can have minimum one key and two children. Leaf nodes will have zero children. 
 
-    7) Bottom-up approach is followed while constructing a B-Tree.
+    7) Adjacent to each key in a node, there is a Record Pointer which points to a record in data table. For the sake of simplicity, we ignore these pointers.
 
-    Reference: https://youtu.be/aZjYr87r1b8 , Unacademy DBMS playlist etc.
+    8) Bottom-up approach is followed while constructing a B-Tree. Insertion always happens at the leaf node.
+
+    Reference: https://youtu.be/aZjYr87r1b8 , https://youtu.be/94ErZ5K8XZg?si=seavYhj3SVbXxviZ , bTreeConstruction.png etc.
 
  */
