@@ -12,7 +12,7 @@
 
     First, we add an element to the leaf (keeping the heap's completeness intact). After that it moves towards root by comparing with its parent node. Refer to video lecture for details.
 
-    Time complexity of Insertion in heap Min( O(1),O(logn) ) .
+    Time complexity (worst case) of Insertion in heap is O(logn). In the best case, it becomes O(1). 
 
     Deletion:
     ---------

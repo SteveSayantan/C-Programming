@@ -35,14 +35,18 @@ It is a tree with its each node having a max degree of 2.
 
 2. Perfect BT:  Internal nodes should have 2 children & all leaf nodes should be on same level
 
-3. Complete BT: All levels should be completely filled. If the last level is not completely filled, it should have its nodes aligned to the left.   
+3. Complete BT: All levels should be completely filled. If the last level is not completely filled, it should have all of its nodes aligned to the left.
 
 4. Degenerate BT: Each parent node should have exacly one child. It is of two types:
 
    1. Left-skewed BT: All the child nodes are aligned to the left.
 
    2. Right-skewed BT: All the child nodes are aligned to the right.
-    
+
+*Here is an example of Complete Binary tree:*
+
+![Examples of complete binary tree](./asset/Complete-Binary-Tree.png)
+ 
 **Representation of Binary Tree:**
 
 - Array Representation: Inefficient as insertion, deletion operation are very costly.
@@ -59,14 +63,14 @@ It is a tree with its each node having a max degree of 2.
 
   ![ScreenShot of Linked Representation of BT](./asset/LinkedBT.JPG)
  
-```
-  struct node{
-      int data;
-      struct node* left;
-      struct node* right;
-  };
+  ```
+    struct node{
+        int data;
+        struct node* left;
+        struct node* right;
+    };
 
-```
+  ```
 - Depth and Height of a Binary Tree
 
   ![Depth and Height of BT](./asset/depthANDheight.JPG)

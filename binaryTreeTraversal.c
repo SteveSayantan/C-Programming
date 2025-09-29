@@ -1,11 +1,15 @@
 /* 
-Traversal in a Binary Tree:
+Traversal techniques in a Binary Tree: BFS and DFS
 
-    1. PreOrder Traversal: Root -> Left SubTree -> Right Subtree    
+    DFS techniques can be classified as:
+    
+        1. PreOrder Traversal: Root -> Left Subtree -> Right Subtree    
 
-    2. PostOrder Traversal:  Left SubTree -> Right Subtree -> Root     
+        2. PostOrder Traversal:  Left Subtree -> Right Subtree -> Root     
 
-    3. InOrder Traversal:  Left SubTree -> Root ->Right Subtree    
+        3. InOrder Traversal:  Left Subtree -> Root ->Right Subtree
+
+    In all of the three cases mentioned above, the T.C. is O(N) where N is the number of nodes in the binary tree as each node of the binary tree is visited exactly once.   
 
  */
 #include <stdio.h>

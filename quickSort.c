@@ -8,11 +8,13 @@
     3. The Best-Case time complexity is O(NlogN)
 
     4. The Worst-Case time complexity is O(N^2)
+
+    5. It is tail-recursive
  */
 
  #include <stdio.h>
 
- void sort(int nums[], int low, int hi) {
+ void sort(int nums[], int low, int hi) {   
         if (low >= hi) {
             return;
         }
@@ -23,10 +25,14 @@
 
         while (s < e) {                         // if only one element is there, no need to run the loop
 
-            while (nums[s] <= pivot && s <hi) {          // search for an element greater than pivot in the left part. s<hi because we need s to stop when s=hi 
+
+            // search for an element greater than pivot in the left part.
+            while (nums[s] <= pivot && s <hi) {          //  <= is used as we want to pick only the greater elements. s<hi because we need s to stop when s=hi 
                 s++;
             }
-            while (nums[e] > pivot && e > low) {          // search for an element less than pivot in the right part. e<low because we need e to stop when e=low
+
+            // search for an element less than pivot in the right part
+            while (nums[e] > pivot && e > low) {          // > is used as we want to pick only the smaller or equal elements. e<low because we need e to stop when e=low
                 e--;
             }
 
