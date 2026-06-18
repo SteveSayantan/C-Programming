@@ -76,7 +76,7 @@ Time Complexity (Adjacency Matrix) :
 
     For the first iteration:
 
-        Before reaching the for loop, we perform a constant time operation dequeue() --> O(1) , This will be executed each time we enter While loop
+        Before reaching the for loop, we perform a constant time operation pop() --> O(1) , This will be executed each time we enter While loop
         Now, the for loop will execute for 5 times (i.e. the number of vertices)
 
         Total --> (1+5)
@@ -105,7 +105,7 @@ Time Complexity (Adjacency List):
 
     For first while loop , 
     node = 0,   edges = 3
-    Now, before going to the for loop part, u see a constant time operation O(1)  --> deQueue( )
+    Now, before going to the for loop part, u see a constant time operation O(1)  --> pop()
     This step will be executed every time we enter into while loop.
 
     So, for first while loop how many times for loop will execute ??

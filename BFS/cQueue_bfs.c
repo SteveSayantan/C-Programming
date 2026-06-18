@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define MAX 10
 
 int front=-1,rear=-1,qArr[MAX];

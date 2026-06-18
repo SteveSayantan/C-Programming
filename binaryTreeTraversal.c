@@ -9,7 +9,7 @@ Traversal techniques in a Binary Tree: BFS and DFS
 
         3. InOrder Traversal:  Left Subtree -> Root ->Right Subtree
 
-    In all of the three cases mentioned above, the T.C. is O(N) where N is the number of nodes in the binary tree as each node of the binary tree is visited exactly once.   
+    In all of the three cases mentioned above, the T.C. is O(N) where N is the number of nodes in the binary tree as each node of the binary tree is visited exactly once. Also, in each case, the S.C. is O(H) where H is the height of the binary tree, as the height decides the max no. of function calls to be stored in the stack.  
 
  */
 #include <stdio.h>
